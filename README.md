@@ -10,7 +10,7 @@ Take a flake input and a list of subdirectories. Add the cabal packages defined 
 Generate package definitions for each dependency package with `cabal-to-nix`, add them to the package's `pkg-def-extras`. 
 
 
-### Result
+Result:
 
 ````nix develop````
 ```
@@ -20,7 +20,14 @@ Generate package definitions for each dependency package with `cabal-to-nix`, ad
 ```
 Cabal can't find the package.
 
+This is because `cabalProject` first calls `callCabalProjectToNix` which doesn't use `pkg-def-extras`.
 
-### So...
 
-What else needs to be added to the package? Build the package and add it to `hsPkgs`? or `packages` in modules?
+### What now?
+
+`callCabalProjectToNix` has two ways to include extra packages:
+
+    - via `cabalProjectLocal` and friends
+    - via `configureArgs` `--package-db`
+
+Let's try to generate a package db with haskell.nix and use `--package-db`.
