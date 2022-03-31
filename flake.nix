@@ -18,7 +18,7 @@
                 src = ./.;
                 compiler-nix-name = "ghc8107";
                 index-state = "2022-02-22T00:00:00Z";
-                pkg-def-extras = [{ mydep = import "${inputs.mydep.src}/mydep.nix"; }];
+                pkg-def-extras = [ (hackage: { mydep = import "${inputs.mydep.src}/mydep.nix"; }) ];
                 shell = {
                   tools = {
                     cabal = { };

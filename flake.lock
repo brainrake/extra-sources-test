@@ -243,11 +243,11 @@
       "flake": false,
       "locked": {
         "narHash": "sha256-PaDOQAwf4VGlqAOa5VvQKk++NFE73rYt7ysU7xdY+cA=",
-        "path": "/nix/store/7nkhc7434zf7w9jrir85s5s3k10km9dm-source/mydep",
+        "path": "/nix/store/b0zh0vi1b620fgj399654fm0a3f21qc9-source/mydep",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/7nkhc7434zf7w9jrir85s5s3k10km9dm-source/mydep",
+        "path": "/nix/store/b0zh0vi1b620fgj399654fm0a3f21qc9-source/mydep",
         "type": "path"
       }
     },
